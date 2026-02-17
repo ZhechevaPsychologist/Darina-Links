@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Дарина Жечева</title>
+  <style>
+    :root{
+      --accent:#C3A6F2;         /* button + ring */
+      --accent2:#B596F0;        /* subtle gradient */
+      --bg:#F6F4FA;
+      --card:#FFFFFF;
+      --text:#1D1D1F;
+      --muted:#6B6B6F;
+      --line:#D9D2E6;
+      --shadow:0 18px 50px rgba(0,0,0,.12);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, #efe9fb 0%, var(--bg) 55%, #f7f7fb 100%);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 16px;
+    }
+    .card{
+      width:min(520px, 100%);
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.98));
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:30px 22px 26px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    /* soft side glow (so no "lines" to get displaced) */
+    .card:before, .card:after{
+      content:"";
+      position:absolute;
+      top:-120px;
+      width:220px;
+      height:320px;
+      background: radial-gradient(closest-side, rgba(195,166,242,.28), rgba(195,166,242,0));
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    .card:before{left:-120px}
+    .card:after{right:-120px}
+
+    .avatar{
+      width:132px;
+      height:132px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid rgba(195,166,242,.85);
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+      margin:2px auto 14px;
+      display:block;
+      background:#eee;
+    }
+    h1{
+      margin:6px 0 4px;
+      font-size:28px;
+      line-height:1.15;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:800; /* IMPORTANT: bold */
+      color:var(--text);
+    }
+    .services{
+      margin:0 auto 14px;
+      max-width:420px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .services .dot{padding:0 7px; color:#9a9aa1}
+    .quote{
+      margin:10px auto 18px;
+      max-width:420px;
+      font-size:15px;
+      color:#444;
+      font-style:italic;
+    }
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:8px;
+    }
+    a.btn{
+      display:block;
+      width:100%;
+      padding:15px 18px;
+      border-radius:999px;
+      color:white;
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      box-shadow:0 10px 20px rgba(195,166,242,.35);
+      border:1px solid rgba(255,255,255,.35);
+      transition: transform .08s ease, filter .12s ease;
+    }
+    a.btn:hover{filter:brightness(0.98)}
+    a.btn:active{transform:translateY(1px)}
+    .note{
+      margin-top:14px;
+      font-size:12px;
+      color:#8a8a90;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="avatar" src="darina-profile.png" alt="Дарина Жечева" />
+    <h1>Дарина Жечева</h1>
+    <div class="subtitle">Интегративен психолог</div>
+
+    <div class="services">
+      Психотерапия <span class="dot">·</span> Астро-психо консултации <span class="dot">·</span> Семейни констелации
+    </div>
+
+    <div class="quote">„Когато се свържеш със себе си, животът се подрежда“</div>
+
+    <nav class="buttons" aria-label="Линкове">
+      <a class="btn" href="https://www.facebook.com/Darina.Zhecheva.Psychologist" target="_blank" rel="noopener">Facebook страница</a>
+      <a class="btn" href="https://www.instagram.com/darizhecheva_psychologist?igsh=MWd4dDI1Nm91ZG9yaQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram страница</a>
+      <a class="btn" href="https://invite.viber.com/?g2=AQAYuiZJ%2Fj7E31W5eiiphJtY9xbQIInUCghLMDRA1jf84c4o2I0%2BeiKzLog4ZiEG" target="_blank" rel="noopener">Viber канал</a>
+      <a class="btn" href="https://superdoc.bg/lekar/darina-zhecheva" target="_blank" rel="noopener">Superdoc – запази час</a>
+      <a class="btn" href="https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=116846839914708&business_id=1284684045234555" target="_blank" rel="noopener">Онлайн консултация</a>
+    </nav>
+  </main>
+</body>
+</html>
